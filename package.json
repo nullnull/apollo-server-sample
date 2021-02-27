@@ -13,8 +13,12 @@
     "generate:nexus": "ts-node --transpile-only src/schema"
   },
   "dependencies": {
+    "@bugsnag/js": "^7.8.0",
     "@prisma/client": "2.17.0",
     "apollo-server": "2.21.0",
+    "apollo-server-plugin-base": "^0.10.4",
+    "apollo-server-plugin-error": "^2.0.1",
+    "apollo-server-types": "^0.6.3",
     "graphql": "15.5.0",
     "graphql-iso-date": "3.6.1",
     "nexus": "1.0.0",

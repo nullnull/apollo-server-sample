@@ -22,6 +22,9 @@ module.exports = {
       },
     ],
     'max-len': ['error', { code: 200 }],
+    'import/prefer-default-export': 0,
+    'no-unused-vars': 0,
+    'no-unreachable': 0,
   },
   settings: {
     'import/resolver': {

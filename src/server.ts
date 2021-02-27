@@ -1,10 +1,12 @@
 import { ApolloServer } from 'apollo-server'
+import { getApolloBugsnagPlugin } from './plugins/apollo_server_plugin_bugsnag'
 import { schema } from './schema'
 import { context } from './context'
 
 const server = new ApolloServer({
-  schema: schema,
-  context: context,
+  schema,
+  context,
+  plugins: [getApolloBugsnagPlugin()],
 })
 
 server.listen().then(async ({ url }) => {
