@@ -11,6 +11,7 @@ const server = new ApolloServer({
   context,
   plugins: [getApolloBugsnagPlugin()],
   playground: true,
+  introspection: true,
 })
 
 server.listen().then(async ({ url }) => {
