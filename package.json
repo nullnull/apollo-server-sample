@@ -8,6 +8,8 @@
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "clean": "rm -rf dist",
     "build": "npm -s run clean && npm -s run generate && tsc",
+    "db:migrate": "prisma migrate dev --preview-feature",
+    "db:migrate:production": "prisma migrate deploy --preview-feature",
     "generate": "npm -s run generate:prisma && npm -s run generate:nexus",
     "generate:prisma": "prisma generate",
     "generate:nexus": "ts-node --transpile-only src/schema"
