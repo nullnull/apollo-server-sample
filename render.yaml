@@ -9,7 +9,9 @@ services:
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
-        value:
+        fromDatabase:
+          name: db
+          property: connectionString
       - key: BUGSNAG_API_KEY
         value:
 databases:
