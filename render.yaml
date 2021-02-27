@@ -15,5 +15,5 @@ services:
 databases:
   - name: apollo-server-sample
     plan: starter
-    databaseName: apollo-server-sample
+    databaseName: apollo
     user: admin

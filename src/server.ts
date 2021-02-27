@@ -10,6 +10,7 @@ const server = new ApolloServer({
   schema,
   context,
   plugins: [getApolloBugsnagPlugin()],
+  playground: true,
 })
 
 server.listen().then(async ({ url }) => {
