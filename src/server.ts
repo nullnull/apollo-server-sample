@@ -1,7 +1,10 @@
+import dotenv from 'dotenv'
 import { ApolloServer } from 'apollo-server'
 import { getApolloBugsnagPlugin } from './plugins/apollo_server_plugin_bugsnag'
 import { schema } from './schema'
 import { context } from './context'
+
+dotenv.config()
 
 const server = new ApolloServer({
   schema,

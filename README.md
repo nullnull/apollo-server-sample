@@ -2,18 +2,18 @@
 
 This example shows how to implement a **GraphQL server with TypeScript** with the following stack, based on [official example](https://github.com/prisma/prisma-examples/tree/latest/typescript/graphql) and add my favorite stack:
 
-* From Official Example
-  - [**Apollo Server**](https://github.com/apollographql/apollo-server): HTTP server for GraphQL APIs   
-  - [**GraphQL Nexus**](https://nexusjs.org/docs/): GraphQL schema definition and resolver implementation 
-  - [**Prisma Client**](https://www.prisma.io/docs/concepts/components/prisma-client): Databases access (ORM)                  
-  - [**Prisma Migrate**](https://www.prisma.io/docs/concepts/components/prisma-migrate): Database migrations               
-* My Favorite
+- From Official Example
+  - [**Apollo Server**](https://github.com/apollographql/apollo-server): HTTP server for GraphQL APIs
+  - [**GraphQL Nexus**](https://nexusjs.org/docs/): GraphQL schema definition and resolver implementation
+  - [**Prisma Client**](https://www.prisma.io/docs/concepts/components/prisma-client): Databases access (ORM)
+  - [**Prisma Migrate**](https://www.prisma.io/docs/concepts/components/prisma-migrate): Database migrations
+- My Favorite
+  - dotenv
   - postgres
   - docker-compose.yml
   - auto formatting (husky, prettier, eslint)
   - bugsnag
   - deployment settings for render
-
 
 ## Getting started
 
@@ -26,7 +26,6 @@ $ yarn run dev
 ```
 
 Navigate to [http://localhost:4000](http://localhost:4000) in your browser to explore the API of your GraphQL server in a [GraphQL Playground](https://github.com/prisma/graphql-playground).
-
 
 ## Evolving the app
 
@@ -165,7 +164,7 @@ const Mutation = objectType({
 +         }),
 +       ),
 +       bio: stringArg()
-+     }, 
++     },
 +     resolve: async (_, args, context) => {
 +       return context.prisma.profile.create({
 +         data: {
@@ -190,9 +189,7 @@ Finally, you can test the new mutation like this:
 ```graphql
 mutation {
   addProfileForUser(
-    userUniqueInput: {
-      email: "mahmoud@prisma.io"
-    }
+    userUniqueInput: { email: "mahmoud@prisma.io" }
     bio: "I like turtles"
   ) {
     id
