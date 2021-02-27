@@ -19,10 +19,8 @@ const Query = objectType({
   definition(t) {
     t.nonNull.list.nonNull.field('allUsers', {
       type: 'User',
-      resolve: (_parent, _args, context: Context) => {
-        throw new Error('Test error')
-        context.prisma.user.findMany()
-      },
+      resolve: (_parent, _args, context: Context) =>
+        context.prisma.user.findMany(),
     })
 
     t.nullable.field('postById', {
