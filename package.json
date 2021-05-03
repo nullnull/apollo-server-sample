@@ -55,12 +55,6 @@
       "eslint --fix"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --staged",
-      "pre-push": "tsc && npm run lint"
-    }
-  },
   "engines": {
     "node": ">=10.0.0"
   }
